@@ -1,4 +1,7 @@
+// Import the Scanner class
 import java.util.Scanner
+
+//Create a variable name head to explain what the program does.
 
 var head: String = """This program is an implementation of the Rosenberg
 Self-Esteem Scale. This program will show you ten
@@ -6,12 +9,17 @@ statements that you could possibly apply to yourself.
 Please rate how much you agree with each of the
 statements by responding with one of these four letters:"""
 
+//create another variable to explain what letters mean.
+
 var ChoiceMains: String = """D means you strongly disagree with the statement.
 d means you disagree with the statement.
 a means you agree with the statement.
 A means you strongly agree with the statement."""
 
+//Create a function to ask positive questions.
+
 fun ask_positive_question(statement: String) : Int {
+
     /*  Display one statement to the user and get the user's response.
     Then determine the score for the response and return the score.
 
@@ -40,7 +48,10 @@ fun ask_positive_question(statement: String) : Int {
 
 }
 
+//Create a function to ask negative questions.
+
 fun ask_negative_question(statement: String) : Int {
+
     /* Display one statement to the user and get the user's response.
     Then determine the score for the response and return the score.
 
@@ -48,7 +59,9 @@ fun ask_negative_question(statement: String) : Int {
         statement: The statement to show the user.
         pos_or_neg: Either the constant POSITIVE or NEGATIVE.
     Return: the score from the user's response to the statement. */
+
     println(statement)
+
     val input = Scanner(System.`in`)
     print("   Enter D, d, a, or A: ")
     val answer = input.next()
@@ -65,10 +78,13 @@ fun ask_negative_question(statement: String) : Int {
 }
 
 fun main() {
+    // Output the explanations
     println(head)
     println()
     println(ChoiceMains)
     println()
+
+    // Call the functions and add theirs returns.
     var score = 0
     score += ask_positive_question("1. I feel that I am a person of worth," +
             " at least on an equal plane with others.")
@@ -81,7 +97,9 @@ fun main() {
     score += ask_negative_question("8. I wish I could have more respect for myself.")
     score += ask_negative_question("9. I certainly feel useless at times.")
     score += ask_negative_question("10. At times I think I am no good at all.")
+    // The sum of scores output it.
     println("Your score is $score.")
+    // Explain the result.
     println("The scale ranges from 0-30. Scores between 15 and 25 are within normal range;" +
             " scores below 15 suggest low self-esteem.")
 
