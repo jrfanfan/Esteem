@@ -20,4 +20,4 @@ Kotlin
 
 # Useful Websites
 * [Web Site Name](https://www.w3schools.com/kotlin/kotlin_variables.php)
-* * [Web Site Name](https://beginnersbook.com/2018/09/kotlin-if-else-expression/)
+* [Web Site Name](https://beginnersbook.com/2018/09/kotlin-if-else-expression/)
